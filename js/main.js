@@ -117,25 +117,24 @@ $(document).ready(function () {
             var videoExists = false;
             for (var i = 2; i <= 50; i++) {
                 jQuery.ajaxSetup({async: false});
-                $.get("images/dasntacner/arandznahatkutyunner/arandznahatkutyunner" + i + ".png")
+                $.get("images/dasntacner/@ndhanur/@ndhanur" + i + ".png")
                     .done(function () {
                         imageCount++;
                     }).fail(function () {
-                    $.get("images/dasntacner/arandznahatkutyunner/arandznahatkutyunner" + i + ".mp4")
+                    $.get("images/dasntacner/@ndhanur/@ndhanur" + i + ".mp4")
                         .done(function () {
                             imageCount++;
                         }).fail(function () {
                         imageExist = false;
                     }).success(function () {
-                        paging(imageCount, "dasntacner/arandznahatkutyunner", i);
+                        if(i == 1){
+                            videoExists = true;
+                        }
+                        paging(imageCount, "dasntacner/@ndhanur", i);
                     })
                 }).success(function () {
-                    if(i == 1){
-                        videoExists = true;
-                    }
-                    paging(imageCount, "dasntacner/arandznahatkutyunner", 0);
+                    paging(imageCount, "dasntacner/@ndhanur", 0);
                 })
-
                 if (!imageExist) {
                     break;
                 }
@@ -143,8 +142,9 @@ $(document).ready(function () {
             if (imageCount == 1) {
                 $(".bootpag").remove();
             }
+
             if (videoExists){
-                videoUrl = "mages/dasntacner/arandznahatkutyunner/arandznahatkutyunner1.mp4";
+                videoUrl = "images/dasntacner/@ndhanur/@ndhanur1.mp4";
                 var video = $('<video />', {
                     id: 'video',
                     src: videoUrl,
@@ -158,7 +158,7 @@ $(document).ready(function () {
                 $('.image-container').css("background-image", 'url()');
             }
             else if(!videoExists){
-                imageUrl = "images/dasntacner/arandznahatkutyunner/arandznahatkutyunner1.png";
+                imageUrl = "images/dasntacner/@ndhanur/@ndhanur1.png";
                 $('.image-container').css("background-image", 'url(' + imageUrl + ')');
             }
 
@@ -420,7 +420,7 @@ function hrefClick() {
         var imageExist = true;
         var imageCount = 1;
 
-        if (indexOfHref == 0) {
+        if (indexOfHref == 2) {
             $(".hrefs").hide();
             var videoExists = false;
             for (var i = 2; i <= 50; i++) {
@@ -474,58 +474,7 @@ function hrefClick() {
             $(".hrefs").fadeIn(100);
         }
 
-        else if (indexOfHref == 1) {
-            $(".hrefs").hide();
-            var videoExists = false;
-            for (var i = 2; i <= 50; i++) {
-                jQuery.ajaxSetup({async: false});
-                $.get("images/dasntacner/grancvir_dasntacin_hima/grancvir_dasntacin_hima" + i + ".png")
-                    .done(function () {
-                        imageCount++;
-                    }).fail(function () {
-                    $.get("images/dasntacner/grancvir_dasntacin_hima/grancvir_dasntacin_hima" + i + ".mp4")
-                        .done(function () {
-                            imageCount++;
-                        }).fail(function () {
-                        imageExist = false;
-                    }).success(function () {
-                        if(i == 1){
-                            videoExists = true;
-                        }
-                        paging(imageCount, "dasntacner/grancvir_dasntacin_hima", i);
-                    })
-                }).success(function () {
-                    paging(imageCount, "dasntacner/grancvir_dasntacin_hima", 0);
-                })
-                if (!imageExist) {
-                    break;
-                }
-            }
-            if (imageCount == 1) {
-                $(".bootpag").remove();
-            }
-            if (videoExists){
-                videoUrl = "images/dasntacner/grancvir_dasntacin_hima/grancvir_dasntacin_hima1.mp4";
-                var video = $('<video />', {
-                    id: 'video',
-                    src: videoUrl,
-                    type: 'video/mp4',
-                    controls: true
-                });
-                $(".videos").empty();
-                video.appendTo($(".videos"));
-                $(".videos").show();
-                $(".hrefs").hide();
-                $('.image-container').css("background-image", 'url()');
-            }
-            else if(!videoExists){
-                imageUrl = "images/dasntacner/grancvir_dasntacin_hima/grancvir_dasntacin_hima1.png";
-                $('.image-container').css("background-image", 'url(' + imageUrl + ')');
-            }
-            $(".hrefs").fadeIn(100);
-
-        }
-        else if (indexOfHref == 2) {
+        else if (indexOfHref == 0) {
             $(".hrefs").hide();
             var videoExists = false;
             for (var i = 2; i <= 50; i++) {
@@ -577,7 +526,7 @@ function hrefClick() {
 
             $(".hrefs").fadeIn(100);
         }
-        else if (indexOfHref == 3) {
+        else if (indexOfHref == 1) {
             $(".hrefs").hide();
             var videoExists = false;
 
@@ -631,7 +580,7 @@ function hrefClick() {
 
             $(".hrefs").fadeIn(100);
         }
-        else if (indexOfHref == 4) {
+        else if (indexOfHref == 5) {
             $(".hrefs").hide();
             var videoExists = false;
             for (var i = 2; i <= 50; i++) {
@@ -684,7 +633,7 @@ function hrefClick() {
             $(".hrefs").fadeIn(100);
         }
 
-        else if (indexOfHref == 5) {
+        else if (indexOfHref == 4) {
             $(".hrefs").hide();
             var videoExists = false;
             for (var i = 2; i <= 50; i++) {
@@ -737,7 +686,7 @@ function hrefClick() {
             $(".hrefs").fadeIn(100);
         }
 
-        else if (indexOfHref == 6) {
+        else if (indexOfHref == 3) {
             $(".hrefs").hide();
             var videoExists = false;
             for (var i = 2; i <= 50; i++) {
